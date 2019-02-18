@@ -1,10 +1,10 @@
 # MyRetrofit
-retrofit , get , json ,android ,frgament
+ApiClient class
 
 public class ApiClient{
+
     private static final String BASE_URL = "https://api.myjson.com/";
     private static Retrofit retrofit = null;
-
     public static Retrofit getApiClient()
     {
         if(retrofit==null){
@@ -13,11 +13,12 @@ public class ApiClient{
         return retrofit;
     }
     }
+
+ApiInterface
     
     public interface ApiInterface {
-
+    
     @GET("bins/fdypk")
-   // Call<JsonResponce> getData();
+    Call<JsonResponce> getData();
     Call<Example> getData_();
-
-}
+    }
